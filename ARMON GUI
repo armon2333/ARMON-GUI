@@ -1,0 +1,1033 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("ARMON GUI", "BloodTheme")
+
+--Main
+local Tab = Window:NewTab("☠#1😈")
+local Section = Tab:NewSection("P--------------------------------🤫------------------------------1")
+
+
+Section:NewButton("FlingALL", "Sirve para mandar a volar a todos los jugadores", function()
+    loadstring(game:HttpGet('https://github.com/DigitalityScripts/roblox-scripts/raw/main/loop fling all'))()
+end)
+
+Section:NewButton("Infinty Yeald", "Comandos", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+Section:NewButton("InstaKill", "Cualquier jugador que toques con un objeto morira al tocar kill", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/v8PX741z"))()
+end)
+
+Section:NewButton("Agrandar Manos", "Hace que te crezcan mucho la mano y la pierna", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Leg%20Resize'))()
+end)
+
+Section:NewButton("Hat Fling", "Convierte tu sombrero en un Sombrero Volador que manda a volar al que te toque", function()
+    loadstring(game:HttpGet('https://gist.githubusercontent.com/1BlueCat/544f7efbe88235666b5b7add65b7344d/raw/f20804bb85542dcc3bc938982e1f05b7ff05cded/FE%2520Hat%2520Fling'))()
+end)
+
+Section:NewButton("Fly", "Hace que vueles mas rapido", function()
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+
+                Title = "Credits";
+
+                Text = "Modified By SpekzZ";
+                Duration = 3.5;
+            })
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local main = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local up = Instance.new("TextButton")
+local down = Instance.new("TextButton")
+local onof = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local plus = Instance.new("TextButton")
+local speed = Instance.new("TextLabel")
+local mine = Instance.new("TextButton")
+
+--Properties:
+
+main.Name = "main"
+main.Parent = game.CoreGui
+main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = main
+Frame.BackgroundColor3 = Color3.fromRGB(163, 255, 137)
+Frame.BorderColor3 = Color3.fromRGB(103, 221, 213)
+Frame.Position = UDim2.new(0.100320168, 0, 0.379746825, 0)
+Frame.Size = UDim2.new(0, 190, 0, 57)
+
+up.Name = "up"
+up.Parent = Frame
+up.BackgroundColor3 = Color3.fromRGB(79, 255, 152)
+up.Size = UDim2.new(0, 44, 0, 28)
+up.Font = Enum.Font.SourceSans
+up.Text = "UP"
+up.TextColor3 = Color3.fromRGB(0, 0, 0)
+up.TextSize = 14.000
+
+down.Name = "down"
+down.Parent = Frame
+down.BackgroundColor3 = Color3.fromRGB(215, 255, 121)
+down.Position = UDim2.new(0, 0, 0.491228074, 0)
+down.Size = UDim2.new(0, 44, 0, 28)
+down.Font = Enum.Font.SourceSans
+down.Text = "DOWN"
+down.TextColor3 = Color3.fromRGB(0, 0, 0)
+down.TextSize = 14.000
+
+onof.Name = "onof"
+onof.Parent = Frame
+onof.BackgroundColor3 = Color3.fromRGB(255, 249, 74)
+onof.Position = UDim2.new(0.702823281, 0, 0.491228074, 0)
+onof.Size = UDim2.new(0, 56, 0, 28)
+onof.Font = Enum.Font.SourceSans
+onof.Text = "fly"
+onof.TextColor3 = Color3.fromRGB(0, 0, 0)
+onof.TextSize = 14.000
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(242, 60, 255)
+TextLabel.Position = UDim2.new(0.469327301, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 100, 0, 28)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Fly Gui V2"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+plus.Name = "plus"
+plus.Parent = Frame
+plus.BackgroundColor3 = Color3.fromRGB(133, 145, 255)
+plus.Position = UDim2.new(0.231578946, 0, 0, 0)
+plus.Size = UDim2.new(0, 45, 0, 28)
+plus.Font = Enum.Font.SourceSans
+plus.Text = "+"
+plus.TextColor3 = Color3.fromRGB(0, 0, 0)
+plus.TextScaled = true
+plus.TextSize = 14.000
+plus.TextWrapped = true
+
+speed.Name = "speed"
+speed.Parent = Frame
+speed.BackgroundColor3 = Color3.fromRGB(255, 85, 0)
+speed.Position = UDim2.new(0.468421042, 0, 0.491228074, 0)
+speed.Size = UDim2.new(0, 44, 0, 28)
+speed.Font = Enum.Font.SourceSans
+speed.Text = "1"
+speed.TextColor3 = Color3.fromRGB(0, 0, 0)
+speed.TextScaled = true
+speed.TextSize = 14.000
+speed.TextWrapped = true
+
+mine.Name = "mine"
+mine.Parent = Frame
+mine.BackgroundColor3 = Color3.fromRGB(123, 255, 247)
+mine.Position = UDim2.new(0.231578946, 0, 0.491228074, 0)
+mine.Size = UDim2.new(0, 45, 0, 29)
+mine.Font = Enum.Font.SourceSans
+mine.Text = "-"
+mine.TextColor3 = Color3.fromRGB(0, 0, 0)
+mine.TextScaled = true
+mine.TextSize = 14.000
+mine.TextWrapped = true
+
+speeds = 1
+
+local speaker = game:GetService("Players").LocalPlayer
+
+local chr = game.Players.LocalPlayer.Character
+local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
+
+nowe = false
+
+Frame.Active = true -- main = gui
+Frame.Draggable = true
+
+onof.MouseButton1Down:connect(function()
+
+	if nowe == true then
+		nowe = false
+
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing,true)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown,true)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Flying,true)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Freefall,true)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.GettingUp,true)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping,true)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Landed,true)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics,true)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding,true)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,true)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running,true)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.RunningNoPhysics,true)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated,true)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.StrafingNoPhysics,true)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Swimming,true)
+		speaker.Character.Humanoid:ChangeState(Enum.HumanoidStateType.RunningNoPhysics)
+	else 
+		nowe = true
+
+
+
+		for i = 1, speeds do
+			spawn(function()
+
+				local hb = game:GetService("RunService").Heartbeat	
+
+
+				tpwalking = true
+				local chr = game.Players.LocalPlayer.Character
+				local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
+				while tpwalking and hb:Wait() and chr and hum and hum.Parent do
+					if hum.MoveDirection.Magnitude > 0 then
+						chr:TranslateBy(hum.MoveDirection)
+					end
+				end
+
+			end)
+		end
+		game.Players.LocalPlayer.Character.Animate.Disabled = true
+		local Char = game.Players.LocalPlayer.Character
+		local Hum = Char:FindFirstChildOfClass("Humanoid") or Char:FindFirstChildOfClass("AnimationController")
+
+		for i,v in next, Hum:GetPlayingAnimationTracks() do
+			v:AdjustSpeed(0)
+		end
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing,false)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown,false)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Flying,false)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Freefall,false)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.GettingUp,false)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping,false)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Landed,false)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics,false)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding,false)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,false)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running,false)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.RunningNoPhysics,false)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated,false)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.StrafingNoPhysics,false)
+		speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Swimming,false)
+		speaker.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Swimming)
+	end
+
+
+
+
+	
+		local plr = game.Players.LocalPlayer
+		local UpperTorso = plr.Character.LowerTorso
+		local flying = true
+		local deb = true
+		local ctrl = {f = 0, b = 0, l = 0, r = 0}
+		local lastctrl = {f = 0, b = 0, l = 0, r = 0}
+		local maxspeed = 50
+		local speed = 0
+
+
+		local bg = Instance.new("BodyGyro", UpperTorso)
+		bg.P = 9e4
+		bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+		bg.cframe = UpperTorso.CFrame
+		local bv = Instance.new("BodyVelocity", UpperTorso)
+		bv.velocity = Vector3.new(0,0.1,0)
+		bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
+		if nowe == true then
+			plr.Character.Humanoid.PlatformStand = true
+		end
+		while nowe == true or game:GetService("Players").LocalPlayer.Character.Humanoid.Health == 0 do
+			wait()
+
+			if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
+				speed = speed+.5+(speed/maxspeed)
+				if speed > maxspeed then
+					speed = maxspeed
+				end
+			elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then
+				speed = speed-1
+				if speed < 0 then
+					speed = 0
+				end
+			end
+			if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+				lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
+			elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+			else
+				bv.velocity = Vector3.new(0,0,0)
+			end
+
+			bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
+		end
+		ctrl = {f = 0, b = 0, l = 0, r = 0}
+		lastctrl = {f = 0, b = 0, l = 0, r = 0}
+		speed = 0
+		bg:Destroy()
+		bv:Destroy()
+		plr.Character.Humanoid.PlatformStand = false
+		game.Players.LocalPlayer.Character.Animate.Disabled = false
+		tpwalking = false
+
+
+
+	
+
+
+
+
+
+end)
+
+
+up.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,2,0)
+	
+end)
+
+
+down.MouseButton1Down:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-2,0)
+
+end)
+
+
+game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function(char)
+	wait(0.7)
+	game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
+	game.Players.LocalPlayer.Character.Animate.Disabled = false
+
+end)
+
+
+plus.MouseButton1Down:connect(function()
+	speeds = speeds + 1
+	speed.Text = speeds
+	if nowe == true then
+		
+
+	tpwalking = false
+	for i = 1, speeds do
+		spawn(function()
+
+			local hb = game:GetService("RunService").Heartbeat	
+
+
+			tpwalking = true
+			local chr = game.Players.LocalPlayer.Character
+			local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
+			while tpwalking and hb:Wait() and chr and hum and hum.Parent do
+				if hum.MoveDirection.Magnitude > 0 then
+					chr:TranslateBy(hum.MoveDirection)
+				end
+			end
+
+		end)
+		end
+		end
+end)
+mine.MouseButton1Down:connect(function()
+	if speeds == 1 then
+		speed.Text = 'can not be less than 1'
+		wait(1)
+		speed.Text = speeds
+	else
+	speeds = speeds - 1
+		speed.Text = speeds
+		if nowe == true then
+	tpwalking = false
+	for i = 1, speeds do
+		spawn(function()
+
+			local hb = game:GetService("RunService").Heartbeat	
+
+
+			tpwalking = true
+			local chr = game.Players.LocalPlayer.Character
+			local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
+			while tpwalking and hb:Wait() and chr and hum and hum.Parent do
+				if hum.MoveDirection.Magnitude > 0 then
+					chr:TranslateBy(hum.MoveDirection)
+				end
+			end
+
+		end)
+		end
+		end
+		end
+end)
+end)
+
+Section:NewButton("SPY", "Para espiar chat privado", function()
+    --This script reveals ALL hidden messages in the default chat
+--chat "/spy" to toggle!
+enabled = true
+--if true will check your messages too
+spyOnMyself = true
+--if true will chat the logs publicly (fun, risky)
+public = false
+--if true will use /me to stand out
+publicItalics = true
+--customize private logs
+privateProperties = {
+	Color = Color3.fromRGB(0,255,255); 
+	Font = Enum.Font.SourceSansBold;
+	TextSize = 18;
+}
+--////////////////////////////////////////////////////////////////
+local StarterGui = game:GetService("StarterGui")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local saymsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
+local getmsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering")
+local instance = (_G.chatSpyInstance or 0) + 1
+_G.chatSpyInstance = instance
+
+local function onChatted(p,msg)
+	if _G.chatSpyInstance == instance then
+		if p==player and msg:lower():sub(1,4)=="/spy" then
+			enabled = not enabled
+			wait(0.3)
+			privateProperties.Text = "{SPY "..(enabled and "EN" or "DIS").."ABLED}"
+			StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+		elseif enabled and (spyOnMyself==true or p~=player) then
+			msg = msg:gsub("[\n\r]",''):gsub("\t",' '):gsub("[ ]+",' ')
+			local hidden = true
+			local conn = getmsg.OnClientEvent:Connect(function(packet,channel)
+				if packet.SpeakerUserId==p.UserId and packet.Message==msg:sub(#msg-#packet.Message+1) and (channel=="All" or (channel=="Team" and public==false and Players[packet.FromSpeaker].Team==player.Team)) then
+					hidden = false
+				end
+			end)
+			wait(1)
+			conn:Disconnect()
+			if hidden and enabled then
+				if public then
+					saymsg:FireServer((publicItalics and "/me " or '').."{SPY} [".. p.Name .."]: "..msg,"All")
+				else
+					privateProperties.Text = "{SPY} [".. p.Name .."]: "..msg
+					StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+				end
+			end
+		end
+	end
+end
+
+for _,p in ipairs(Players:GetPlayers()) do
+	p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+end
+Players.PlayerAdded:Connect(function(p)
+	p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+end)
+privateProperties.Text = "{SPY "..(enabled and "EN" or "DIS").."ABLED}"
+StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+local chatFrame = player.PlayerGui.Chat.Frame
+chatFrame.ChatChannelParentFrame.Visible = true
+chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
+--Credit to O Plays on Youtube, go subscribe to him (not my account, just advertising for him, we don't even know eachother lol)
+end)
+
+--Player
+local Player = Window:NewTab("Para MI")
+local PlayerSection = Player:NewSection("Para MI")
+
+PlayerSection:NewSlider("Speed", "Max 100 Minimo 35", 100, 35, function(s) -- 500 (MaxValue) | 35 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+PlayerSection:NewSlider("JumpPower", "Max 200 Minimo 65", 200, 65, function(s) -- 500 (MaxValue) | 35 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+Section:NewButton("God_Mode", "Te convierte en inmortal sin cambiar tu avatar ni animaciones", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/NotFalxe/Roblox-Scripts/source-code/headfling.lua'),true))()
+end)
+
+Section:NewButton("Traductor", "Traductor para el chat traduce todo el Chat a Español", function()
+    --[[
+    Message Translator
+    Made by Aim, updated by evn
+    Credits to Riptxde for the sending chathook
+--]]
+
+if not game['Loaded'] then game['Loaded']:Wait() end; repeat wait(.06) until game:GetService('Players').LocalPlayer ~= nil
+local YourLang = "es" -- Language code that the messages are going to be translated to
+
+local googlev = isfile'googlev.txt' and readfile'googlev.txt' or ''
+local request = request or syn.request
+
+local function outputHook(fnc)
+    return function(...)
+        return fnc('[INLINE TRANSLATOR]', ...)
+    end
+end
+
+local print,warn = outputHook(print), outputHook(warn)
+
+-- // GOOGLE TRANSLATE // --
+
+local translate, getISOCode do
+    function googleConsent(Body) -- Because google really said: "Fuck you."
+        local args = {}
+
+        for match in Body:gmatch('<input type="hidden" name=".-" value=".-">') do
+            local k,v = match:match('<input type="hidden" name="(.-)" value="(.-)">')
+            args[k] = v
+        end
+        googlev = args.v
+        writefile('googlev.txt', args.v)
+    end
+
+    local function got(url, Method, Body) -- Basic version of https://www.npmjs.com/package/got using synapse's request API for google websites
+        Method = Method or "GET"
+        
+        local res = request({
+            Url = url,
+            Method = Method,
+            Headers = {cookie="CONSENT=YES+"..googlev},
+            Body = Body
+        })
+        
+        if res.Body:match('https://consent.google.com/s') then
+            print('consent')
+            googleConsent(res.Body)
+            res = request({
+                Url = url,
+                Method = "GET",
+                Headers = {cookie="CONSENT=YES+"..googlev}
+            })
+        end
+        
+        return res
+    end
+
+    local languages = {
+        auto = "Automatic",
+        af = "Afrikaans",
+        sq = "Albanian",
+        am = "Amharic",
+        ar = "Arabic",
+        hy = "Armenian",
+        az = "Azerbaijani",
+        eu = "Basque",
+        be = "Belarusian",
+        bn = "Bengali",
+        bs = "Bosnian",
+        bg = "Bulgarian",
+        ca = "Catalan",
+        ceb = "Cebuano",
+        ny = "Chichewa",
+        ['zh-cn'] = "Chinese Simplified",
+        ['zh-tw'] = "Chinese Traditional",
+        co = "Corsican",
+        hr = "Croatian",
+        cs = "Czech",
+        da = "Danish",
+        nl = "Dutch",
+        en = "English",
+        eo = "Esperanto",
+        et = "Estonian",
+        tl = "Filipino",
+        fi = "Finnish",
+        fr = "French",
+        fy = "Frisian",
+        gl = "Galician",
+        ka = "Georgian",
+        de = "German",
+        el = "Greek",
+        gu = "Gujarati",
+        ht = "Haitian Creole",
+        ha = "Hausa",
+        haw = "Hawaiian",
+        iw = "Hebrew",
+        hi = "Hindi",
+        hmn = "Hmong",
+        hu = "Hungarian",
+        is = "Icelandic",
+        ig = "Igbo",
+        id = "Indonesian",
+        ga = "Irish",
+        it = "Italian",
+        ja = "Japanese",
+        jw = "Javanese",
+        kn = "Kannada",
+        kk = "Kazakh",
+        km = "Khmer",
+        ko = "Korean",
+        ku = "Kurdish (Kurmanji)",
+        ky = "Kyrgyz",
+        lo = "Lao",
+        la = "Latin",
+        lv = "Latvian",
+        lt = "Lithuanian",
+        lb = "Luxembourgish",
+        mk = "Macedonian",
+        mg = "Malagasy",
+        ms = "Malay",
+        ml = "Malayalam",
+        mt = "Maltese",
+        mi = "Maori",
+        mr = "Marathi",
+        mn = "Mongolian",
+        my = "Myanmar (Burmese)",
+        ne = "Nepali",
+        no = "Norwegian",
+        ps = "Pashto",
+        fa = "Persian",
+        pl = "Polish",
+        pt = "Portuguese",
+        pa = "Punjabi",
+        ro = "Romanian",
+        ru = "Russian",
+        sm = "Samoan",
+        gd = "Scots Gaelic",
+        sr = "Serbian",
+        st = "Sesotho",
+        sn = "Shona",
+        sd = "Sindhi",
+        si = "Sinhala",
+        sk = "Slovak",
+        sl = "Slovenian",
+        so = "Somali",
+        es = "Spanish",
+        su = "Sundanese",
+        sw = "Swahili",
+        sv = "Swedish",
+        tg = "Tajik",
+        ta = "Tamil",
+        te = "Telugu",
+        th = "Thai",
+        tr = "Turkish",
+        uk = "Ukrainian",
+        ur = "Urdu",
+        uz = "Uzbek",
+        vi = "Vietnamese",
+        cy = "Welsh",
+        xh = "Xhosa",
+        yi = "Yiddish",
+        yo = "Yoruba",
+        zu = "Zulu"
+    };
+
+    function find(lang)
+        for i,v in pairs(languages) do
+            if i == lang or v == lang then
+                return i
+            end
+        end
+    end
+
+    function isSupported(lang)
+        local key = find(lang)
+        return key and true or false 
+    end
+
+    function getISOCode(lang)
+        local key = find(lang)
+        return key
+    end
+
+    function stringifyQuery(dataFields)
+        local data = ""
+        for k, v in pairs(dataFields) do
+            if type(v) == "table" then
+                for _,v in pairs(v) do
+                    data = data .. ("&%s=%s"):format(
+                        game.HttpService:UrlEncode(k),
+                        game.HttpService:UrlEncode(v)
+                    )
+                end
+            else
+                data = data .. ("&%s=%s"):format(
+                    game.HttpService:UrlEncode(k),
+                    game.HttpService:UrlEncode(v)
+                )
+            end
+        end
+        data = data:sub(2)
+        return data
+    end
+
+    local reqid = math.random(1000,9999)
+    local rpcidsTranslate = "MkEWBc"
+    local rootURL = "https://translate.google.com/"
+    local executeURL = "https://translate.google.com/_/TranslateWebserverUi/data/batchexecute"
+    local fsid, bl
+
+    do -- init
+        print('initialize')
+        local InitialReq = got(rootURL)
+        fsid = InitialReq.Body:match('"FdrFJe":"(.-)"')
+        bl = InitialReq.Body:match('"cfb2h":"(.-)"')
+    end
+
+    local HttpService = game:GetService("HttpService")
+    function jsonE(o)
+        return HttpService:JSONEncode(o)
+    end
+    function jsonD(o)
+        return HttpService:JSONDecode(o)
+    end
+
+    function translate(str, to, from)
+        reqid+=10000
+        from = from and getISOCode(from) or 'auto'
+        to = to and getISOCode(to) or 'en'
+
+        local data = {{str, from, to, true}, {nil}}
+
+        local freq = {
+            {
+                {
+                    rpcidsTranslate, 
+                    jsonE(data),
+                    nil,
+                    "generic"
+                }
+            }
+        }
+
+        local url = executeURL..'?'..stringifyQuery{rpcids = rpcidsTranslate, ['f.sid'] = fsid, bl = bl, hl="en", _reqid = reqid-10000, rt = 'c'}
+        local body = stringifyQuery{['f.req'] = jsonE(freq)}
+        
+        local req = got(url, "POST", body)
+        
+        local body = jsonD(req.Body:match'%[.-%]\n')
+        local translationData = jsonD(body[1][3])
+        local result = {
+            text = "",
+            from = {
+                language = "",
+                text = ""
+            },
+            raw = ""
+        }
+        result.raw = translationData
+        result.text = translationData[2][1][1][6][1][1]
+        
+        result.from.language = translationData[3]
+        result.from.text = translationData[2][5][1]
+
+        return result
+    end
+end
+
+local Players = game:GetService("Players")
+local LP = Players.LocalPlayer
+local StarterGui = game:GetService('StarterGui')
+for i=1, 15 do
+    local r = pcall(StarterGui["SetCore"])
+    if r then break end
+    game:GetService('RunService').RenderStepped:wait()
+end
+wait()
+
+local properties = {
+    Color = Color3.new(1,1,0);
+    Font = Enum.Font.SourceSansItalic;
+    TextSize = 16;
+}
+
+game:GetService("StarterGui"):SetCore("SendNotification",
+    {
+        Title = "Chat Translator",
+        Text = "Ported to Google Translate",
+        Duration = 3
+    }
+)
+                  
+properties.Text = "[TR] To send messages in a language, say > followed by the target language/language code, e.g.: >ru or >russian. To disable (go back to original language), say >d."
+StarterGui:SetCore("ChatMakeSystemMessage", properties)
+
+function translateFrom(message)
+    local translation = translate(message, YourLang)
+
+    local text
+    if translation.from.language ~= YourLang then 
+        text = translation.text
+    end
+
+    return {text, translation.from.language}
+end
+
+-- // CHAT FUNCTIONS // --
+
+local CBar, Connected = LP['PlayerGui']:WaitForChild('Chat')['Frame'].ChatBarParentFrame['Frame'].BoxFrame['Frame'].ChatBar, {}
+local EventFolder = game:GetService('ReplicatedStorage'):WaitForChild('DefaultChatSystemChatEvents')
+local Chat do
+    function Chat(Original, msg, Channel)
+        CBar.Text = msg
+        for i,v in pairs(getconnections(CBar.FocusLost)) do
+            v:Fire(true, nil, true)
+        end
+    end
+
+    --[[
+    local ChatMain = LP.PlayerScripts:FindFirstChild('ChatMain', true)
+    local MessageSender if ChatMain then
+        MessageSender = require(ChatMain.MessageSender)
+        ChatMain = require(ChatMain)
+    end
+
+    function Chat(Original, msg, Channel)
+        Channel = Channel or "All"
+        if MessageSender and ChatMain then
+            ChatMain.MessagePosted:fire(Original)
+            MessageSender:SendMessage(msg, Channel)
+        else
+            if not _G.SecureChat then
+                game:GetService('Players'):Chat(Original); 
+            end
+            EventFolder.SayMessageRequest:FireServer(msg, Channel)
+        end
+    end]]
+end
+
+do -- :Chatted replacement!!
+    function get(plr, msg)
+        print(msg)
+        local tab = translateFrom(msg)
+        local translation = tab[1]
+        print(translation)
+        if translation then
+            properties.Text = "("..tab[2]:upper()..") ".."[".. plr .."]: "..translation
+            StarterGui:SetCore("ChatMakeSystemMessage", properties)
+        end
+    end
+
+    EventFolder:WaitForChild("OnMessageDoneFiltering").OnClientEvent:Connect(function(data)
+        if data == nil then return end
+
+        local plr = Players:FindFirstChild(data.FromSpeaker)
+        local msg = tostring(data.Message)
+        local originalchannel = tostring(data.OriginalChannel)
+
+        if plr then 
+            plr = plr.DisplayName 
+        else 
+            plr = tostring(data.FromSpeaker)
+        end
+
+        if originalchannel:find("To ") then
+            plr = plr..originalchannel
+        end
+
+        get(plr, msg)
+    end)
+end
+
+local sendEnabled = false
+local target = ""
+
+function translateTo(message, target)
+    target = target:lower() 
+    local translation = translate(message, target, "auto")
+
+    return translation.text
+end
+
+function disableSend()
+    sendEnabled = false
+    properties.Text = "[TR] Sending Disabled"
+    StarterGui:SetCore("ChatMakeSystemMessage", properties)
+end
+
+
+local HookChat = function(Bar)
+    coroutine.wrap(function()
+        if not table.find(Connected,Bar) then
+            local Connect = Bar['FocusLost']:Connect(function(Enter, _, ignore)
+                if ignore then return end
+                if Enter ~= false and Bar.Text ~= '' then
+                    local Message = Bar.Text
+                    Bar.Text = ''
+                    if Message == ">d" then
+                        disableSend()
+                    elseif Message:sub(1,1) == ">" and not Message:find(" ") then
+                        if getISOCode(Message:sub(2)) then
+                            sendEnabled = true
+                            target = Message:sub(2)
+                        else
+                            properties.Text = "[TR] Invalid language"
+                            StarterGui:SetCore("ChatMakeSystemMessage", properties)
+                        end
+                    elseif sendEnabled and not (Message:sub(1,3) == "/e " or Message:sub(1,7) == "/emote ") then
+                        local og = Message
+                        Message = translateTo(Message, target)
+                        --Bar.Text = Message
+                        Chat(og, Message)
+                    else
+                        --Bar.Text = Message
+                        Chat(Message, Message)
+                    end
+                end
+            end)
+            Connected[#Connected+1] = Bar; Bar['AncestryChanged']:Wait(); Connect:Disconnect()
+        end
+    end)()
+end
+
+HookChat(CBar); local BindHook = Instance.new('BindableEvent')
+
+local MT = getrawmetatable(game); local NC = MT.__namecall; setreadonly(MT, false)
+
+MT.__namecall = newcclosure(function(...)
+    local Method, Args = getnamecallmethod(), {...}
+    if rawequal(tostring(Args[1]),'ChatBarFocusChanged') and rawequal(Args[2],true) then 
+        if LP['PlayerGui']:FindFirstChild('Chat') then
+            BindHook:Fire()
+        end
+    end
+    return NC(...)
+end)
+
+BindHook['Event']:Connect(function()
+    CBar = LP['PlayerGui'].Chat['Frame'].ChatBarParentFrame['Frame'].BoxFrame['Frame'].ChatBar
+    HookChat(CBar)
+end)
+--[[
+af = "Afrikaans",
+    sq = "Albanian",
+    am = "Amharic",
+    ar = "Arabic",
+    hy = "Armenian",
+    az = "Azerbaijani",
+    eu = "Basque",
+    be = "Belarusian",
+    bn = "Bengali",
+    bs = "Bosnian",
+    bg = "Bulgarian",
+    ca = "Catalan",
+    ceb = "Cebuano",
+    ny = "Chichewa",
+    ['zh-cn'] = "Chinese Simplified",
+    ['zh-tw'] = "Chinese Traditional",
+    co = "Corsican",
+    hr = "Croatian",
+    cs = "Czech",
+    da = "Danish",
+    nl = "Dutch",
+    en = "English",
+    eo = "Esperanto",
+    et = "Estonian",
+    tl = "Filipino",
+    fi = "Finnish",
+    fr = "French",
+    fy = "Frisian",
+    gl = "Galician",
+    ka = "Georgian",
+    de = "German",
+    el = "Greek",
+    gu = "Gujarati",
+    ht = "Haitian Creole",
+    ha = "Hausa",
+    haw = "Hawaiian",
+    iw = "Hebrew",
+    hi = "Hindi",
+    hmn = "Hmong",
+    hu = "Hungarian",
+    is = "Icelandic",
+    ig = "Igbo",
+    id = "Indonesian",
+    ga = "Irish",
+    it = "Italian",
+    ja = "Japanese",
+    jw = "Javanese",
+    kn = "Kannada",
+    kk = "Kazakh",
+    km = "Khmer",
+    ko = "Korean",
+    ku = "Kurdish (Kurmanji)",
+    ky = "Kyrgyz",
+    lo = "Lao",
+    la = "Latin",
+    lv = "Latvian",
+    lt = "Lithuanian",
+    lb = "Luxembourgish",
+    mk = "Macedonian",
+    mg = "Malagasy",
+    ms = "Malay",
+    ml = "Malayalam",
+    mt = "Maltese",
+    mi = "Maori",
+    mr = "Marathi",
+    mn = "Mongolian",
+    my = "Myanmar (Burmese)",
+    ne = "Nepali",
+    no = "Norwegian",
+    ps = "Pashto",
+    fa = "Persian",
+    pl = "Polish",
+    pt = "Portuguese",
+    pa = "Punjabi",
+    ro = "Romanian",
+    ru = "Russian",
+    sm = "Samoan",
+    gd = "Scots Gaelic",
+    sr = "Serbian",
+    st = "Sesotho",
+    sn = "Shona",
+    sd = "Sindhi",
+    si = "Sinhala",
+    sk = "Slovak",
+    sl = "Slovenian",
+    so = "Somali",
+    es = "Spanish",
+    su = "Sundanese",
+    sw = "Swahili",
+    sv = "Swedish",
+    tg = "Tajik",
+    ta = "Tamil",
+    te = "Telugu",
+    th = "Thai",
+    tr = "Turkish",
+    uk = "Ukrainian",
+    ur = "Urdu",
+    uz = "Uzbek",
+    vi = "Vietnamese",
+    cy = "Welsh",
+    xh = "Xhosa",
+    yi = "Yiddish",
+    yo = "Yoruba",
+    zu = "Zulu"
+--]]
+end)
+
+Section:NewButton("ANTI-AFK", "no te sacara por los 20MIN de inactividad", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/KazeOnTop/Rice-Anti-Afk/main/Wind", true))()
+end)
+
+
+PlayerSection:NewButton("Reset", "Reiniciar", function()
+    game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end)
+
+--Animal Simulator
+local AnimalSim = Window:NewTab("AnimalSim")
+local AnimalSimSection = AnimalSim:NewSection("Animal Simulator")
+
+AnimalSimSection:NewButton("AutoCoin", "AutoCoin", function()
+    while wait() do
+ local Event = game:GetService("ReplicatedStorage").Events.CoinEvent
+Event:FireServer()
+end
+end)
+
+AnimalSimSection:NewButton("HitBox", "Aumenta el rango de ataque acia los jugadores", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/shit%20script%20pack/CheatX'))()
+end)
+
+AnimalSimSection:NewButton("Click Atack", "Kill Aura con click", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/LeftOnReadInvalid/RobloxStuff/main/Animal%20Simulator%20GUI', true))()
+end)
+
+AnimalSimSection:NewButton("AutoFarm GUI", "Auto Entrenar", function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/CrowzScripts/AnimalSim/main/CrowOnTop"))() 
+end)
+
