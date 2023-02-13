@@ -1027,7 +1027,10 @@ AnimalSimSection:NewButton("Click Atack", "Kill Aura con click", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/LeftOnReadInvalid/RobloxStuff/main/Animal%20Simulator%20GUI', true))()
 end)
 
-AnimalSimSection:NewButton("AutoFarm GUI", "Auto Entrenar", function()
-     loadstring(game:HttpGet("https://raw.githubusercontent.com/CrowzScripts/AnimalSim/main/CrowOnTop"))() 
+AnimalSimSection:NewButton("ONI HUB", "AuTo Farm GUi", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Xen101/Roblox/c17c0ec19cfb9cc337eabc53db0bb5245218a6db/Animal%20Simulator/ONI-HUB%20Open%20Source'),true))()
 end)
 
+AnimalSimSection:NewButton("Radio", "GamePass de la Radio Gratis", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/armon2333/ARMON-GUI-2/main/FREE%20RADIO'),true))()
+end)
